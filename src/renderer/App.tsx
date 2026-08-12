@@ -156,7 +156,7 @@ function App() {
         setCurrentSessionId(activeId);
       }
 
-      const { response } = await ApiClient.chat(text, activeId);
+      const { response } = await ApiClient.chat(text, activeId ?? undefined);
       setChatMessages(prev => [...prev, { sender: 'assistant', text: response }]);
     } catch (err) {
       console.error(err);
@@ -298,6 +298,9 @@ function App() {
         history={projectHistory} 
         onSelect={(doc) => { playSFX('click'); setActiveDocument(doc); }} 
         onDelete={handleDeleteHistory}
+        activeSessionId={currentSessionId}
+        onSelectSession={handleSelectSession}
+        onNewSession={handleNewSession}
       />
       
       <div className="main-content">
@@ -476,41 +479,9 @@ function App() {
         </button>
       )}
       
-      {/* Sidebar / Memory Viewer */}
-      <div className="sidebar glass-panel">
-        <h2 style={{ fontSize: '1rem', color: 'var(--nova-green)', letterSpacing: '2px', marginBottom: '10px' }}>PROJECT HISTORY</h2>
-        {projectHistory.map((proj, i) => (
-          <div key={i} className="memory-item" style={{ marginBottom: '15px' }}>
-            <div style={{ fontSize: '0.7rem', color: 'var(--nova-cyan)', marginBottom: '5px' }}>{proj.date}</div>
-            <div style={{ fontWeight: 'bold', fontSize: '0.9rem', marginBottom: '8px' }}>{proj.name}</div>
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <button 
-                className="interactive-btn"
-                style={{ padding: '4px 8px', fontSize: '0.7rem', flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}
-                onClick={() => setActiveDocument(proj.data)}
-              >
-                <span style={{ fontSize: '10px' }}>👁</span> Open
-              </button>
-              <button 
-                className="interactive-btn"
-                style={{ padding: '4px 8px', fontSize: '0.7rem', flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px', background: 'rgba(255,50,50,0.1)', borderColor: 'rgba(255,50,50,0.3)', color: '#ffaaaa' }}
-                onClick={(e) => handleDeleteHistory(proj.name)}
-              >
-                <span style={{ fontSize: '10px' }}>🗑</span> Delete
-              </button>
-            </div>
-          </div>
-        ))}
-        
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', margin: '20px 0' }} />
-        
-        <h2 style={{ fontSize: '1rem', color: 'var(--nova-cyan)', letterSpacing: '2px' }}>CHAT HISTORY</h2>
-        <ChatSidebar 
-          activeSessionId={currentSessionId}
-          onSelectSession={handleSelectSession}
-          onNewSession={handleNewSession}
-        />
       </div>
+
+
     </div>
   );
 }

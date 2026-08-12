@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { DocumentAnalysis } from '../../../main/core/documents/DocumentSchemaValidator';
 
+import { ChatSidebar } from './ChatSidebar';
+
 interface HistorySidebarProps {
   history: { name: string; date: string; data: DocumentAnalysis }[];
   onSelect: (doc: DocumentAnalysis) => void;
   onDelete?: (name: string) => void;
+  activeSessionId: string | null;
+  onSelectSession: (session: any) => void;
+  onNewSession: () => void;
 }
 
-export const HistorySidebar: React.FC<HistorySidebarProps> = ({ history, onSelect, onDelete }) => {
+export const HistorySidebar: React.FC<HistorySidebarProps> = ({ history, onSelect, onDelete, activeSessionId, onSelectSession, onNewSession }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   // Group history by category (documentType)
@@ -124,6 +129,15 @@ export const HistorySidebar: React.FC<HistorySidebarProps> = ({ history, onSelec
             ))}
           </div>
         )}
+
+        <div style={{ borderTop: '1px solid rgba(0, 255, 170, 0.3)', margin: '20px 0' }} />
+        
+        <h3 style={{ color: 'var(--nova-teal)', margin: '0 0 10px 0' }}>Chat History</h3>
+        <ChatSidebar 
+          activeSessionId={activeSessionId}
+          onSelectSession={onSelectSession}
+          onNewSession={onNewSession}
+        />
       </div>
 
       {/* Button to open sidebar if closed */}
