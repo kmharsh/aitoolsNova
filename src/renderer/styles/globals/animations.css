@@ -1,0 +1,84 @@
+/* Core Animations based on State */
+
+/* IDLE */
+@keyframes state-idle {
+  0% { transform: scale(0.95); box-shadow: 0 0 40px var(--nova-cyan); filter: hue-rotate(0deg); }
+  100% { transform: scale(1.05); box-shadow: 0 0 80px var(--nova-cyan), 0 0 120px var(--nova-cyan) inset; filter: hue-rotate(15deg); }
+}
+
+/* LISTENING */
+@keyframes state-listening {
+  0% { transform: scale(1); box-shadow: 0 0 30px var(--nova-teal); }
+  50% { transform: scale(1.1); box-shadow: 0 0 100px var(--nova-teal); }
+  100% { transform: scale(1); box-shadow: 0 0 30px var(--nova-teal); }
+}
+
+/* THINKING */
+@keyframes state-thinking {
+  0% { transform: rotate(0deg) scale(1); border-radius: 50%; }
+  50% { transform: rotate(180deg) scale(0.9); border-radius: 40%; }
+  100% { transform: rotate(360deg) scale(1); border-radius: 50%; }
+}
+
+/* PLANNING */
+@keyframes state-planning {
+  0% { transform: rotate3d(1, 1, 1, 0deg) scale(1); }
+  100% { transform: rotate3d(1, 1, 1, 360deg) scale(1.05); }
+}
+
+/* EXECUTING */
+@keyframes state-executing {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 150px var(--nova-cyan); }
+}
+
+/* WAITING_FOR_PERMISSION */
+@keyframes state-waiting {
+  0% { transform: scale(1); box-shadow: 0 0 40px var(--nova-amber); }
+  100% { transform: scale(1.05); box-shadow: 0 0 80px var(--nova-amber); }
+}
+
+/* COMPLETED */
+@keyframes state-completed {
+  0% { transform: scale(1); box-shadow: 0 0 50px var(--nova-teal); opacity: 1; }
+  50% { transform: scale(1.3); box-shadow: 0 0 200px var(--nova-teal); opacity: 0.8; }
+  100% { transform: scale(1); box-shadow: 0 0 50px var(--nova-teal); opacity: 1; }
+}
+
+/* ERROR */
+@keyframes state-error {
+  0% { transform: translate(0, 0) scale(1); box-shadow: 0 0 50px var(--nova-red); }
+  20% { transform: translate(-5px, 5px) scale(0.95); }
+  40% { transform: translate(5px, -5px) scale(1.05); }
+  60% { transform: translate(-5px, -5px) scale(0.95); }
+  80% { transform: translate(5px, 5px) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1); box-shadow: 0 0 100px var(--nova-red); }
+}
+
+/* Orbital Rings */
+@keyframes orbit-spin {
+  from { transform: rotateZ(0deg) rotateX(60deg) rotateY(0deg); }
+  to { transform: rotateZ(360deg) rotateX(60deg) rotateY(360deg); }
+}
+
+/* Sci-Fi Radar Scanline */
+@keyframes scanline-sweep {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Cybernetic Glitch Effect */
+@keyframes cyber-glitch {
+  0% { clip-path: inset(10% 0 80% 0); transform: translate(-2px, 2px); }
+  20% { clip-path: inset(40% 0 10% 0); transform: translate(2px, -2px); }
+  40% { clip-path: inset(80% 0 5% 0); transform: translate(-2px, 0); }
+  60% { clip-path: inset(5% 0 60% 0); transform: translate(2px, 2px); }
+  80% { clip-path: inset(20% 0 30% 0); transform: translate(-2px, -2px); }
+  100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+}
+
+/* Pulse Glow for AI Text */
+@keyframes text-glow-pulse {
+  0%, 100% { text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3); }
+  50% { text-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.5); }
+}

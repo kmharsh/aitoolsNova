@@ -1,0 +1,192 @@
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1000px;
+}
+
+.scanline-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 255, 255, 0.05), transparent);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  z-index: 50;
+  pointer-events: none;
+  animation: scanline-sweep 6s linear infinite;
+}
+
+.main-content {
+  margin-left: 280px;
+  width: calc(100vw - 280px);
+  height: 100%;
+  position: relative;
+}
+
+.btn-enable-voice-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.btn-enable-voice {
+  background: rgba(0, 20, 30, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--nova-cyan);
+  color: var(--nova-cyan);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.voice-permission-alert {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  background: rgba(255, 50, 50, 0.1);
+  border: 1px solid #ff3333;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.voice-permission-text {
+  color: #ff3333;
+  font-size: 12px;
+}
+
+.btn-fix-permission {
+  background: #ff3333;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.hologram-loader {
+  color: var(--nova-teal);
+  text-align: center;
+  margin-top: 40px;
+}
+
+.holo-core-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.holo-core-interactive {
+  position: relative;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.1s ease-out;
+}
+
+.quick-action-chips {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-chip {
+  background: rgba(0,255,255,0.1);
+  border: 1px solid var(--nova-cyan);
+  color: var(--nova-cyan);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.btn-chip.bold {
+  font-weight: bold;
+}
+
+.btn-settings {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 20, 30, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.btn-diagnostics {
+  position: absolute;
+  top: 20px;
+  right: 110px;
+  background: rgba(0, 20, 30, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,255,255,0.4);
+  color: var(--nova-teal);
+  padding: 8px 16px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+.btn-diagnostics.active {
+  background: rgba(0,255,255,0.3);
+}
+
+.diagnostics-hud {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: rgba(0,0,0,0.8);
+  border: 1px solid var(--nova-teal);
+  padding: 16px;
+  border-radius: 8px;
+  z-index: 1000;
+  color: #fff;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.diagnostics-hud-title {
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 4px;
+}
+
+.diagnostics-value {
+  color: var(--nova-teal);
+}
+
+.diagnostics-total {
+  margin-top: 8px;
+  border-top: 1px dashed rgba(255,255,255,0.2);
+  padding-top: 4px;
+}
+
+.diagnostics-total-value {
+  color: #32ff64;
+  font-weight: bold;
+}
+
+.btn-close-doc {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 50, 50, 0.1);
+  border: 1px solid #ff3333;
+  color: #ff3333;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+}

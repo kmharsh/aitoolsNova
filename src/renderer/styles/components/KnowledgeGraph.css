@@ -1,0 +1,26 @@
+.kg-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  animation: spin 30s linear infinite;
+}
+
+.kg-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kg-node-group {
+  animation: counterSpin 30s linear infinite;
+}
+
+.kg-node-text {
+  text-shadow: 0 0 4px #00ffff;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes counterSpin { 100% { transform: rotate(-360deg); } }

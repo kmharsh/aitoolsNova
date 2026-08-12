@@ -1,0 +1,40 @@
+.er-container {
+  margin-top: 20px;
+  background: rgba(0, 255, 255, 0.02);
+  position: relative;
+  overflow-x: auto;
+}
+
+.er-title {
+  color: #ffb84d;
+  border-bottom: 1px solid rgba(255, 184, 77, 0.3);
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.er-subtitle {
+  text-align: center;
+  color: #ccc;
+  font-size: 12px;
+}
+
+.er-svg-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-width: 800px;
+}
+
+.er-svg {
+  font-family: monospace;
+}
+
+.er-edge {
+  stroke-dasharray: 5,5;
+  animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}

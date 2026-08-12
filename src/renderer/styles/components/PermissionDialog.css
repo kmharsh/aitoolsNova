@@ -1,0 +1,55 @@
+.permission-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.permission-panel {
+  padding: 30px;
+  text-align: center;
+  width: 400px;
+  border: 1px solid var(--nova-amber);
+}
+
+.permission-title {
+  color: var(--nova-amber);
+  margin-bottom: 10px;
+}
+
+.permission-desc {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.permission-action {
+  padding: 12px;
+  background: rgba(255,170,0,0.1);
+  border: 1px solid var(--nova-amber);
+  border-radius: 6px;
+  margin-bottom: 24px;
+  font-family: monospace;
+}
+
+.permission-btn-deny {
+  padding: 10px 24px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.permission-btn-allow {
+  padding: 10px 24px;
+  background: var(--nova-amber);
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}

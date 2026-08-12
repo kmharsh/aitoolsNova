@@ -1,0 +1,36 @@
+.ce-container {
+  overflow-y: auto;
+  max-height: 100%;
+  padding: 20px;
+}
+
+.ce-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ce-brand {
+  font-size: 12px;
+  color: rgba(50, 255, 100, 0.8);
+  letter-spacing: 2px;
+}
+
+.ce-score {
+  font-size: 14px;
+  color: #fff;
+}
+
+.ce-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.ce-avatar-container {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  margin: 0 auto;
+}

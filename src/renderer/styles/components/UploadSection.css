@@ -1,0 +1,28 @@
+.upload-section {
+  position: absolute;
+  bottom: 210px;
+  right: 40px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.upload-btn-direct {
+  background: rgba(50, 255, 100, 0.1);
+  border: 1px solid rgba(50, 255, 100, 0.6);
+  color: rgba(50, 255, 100, 0.8);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.upload-btn-simulate {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid var(--nova-teal);
+  color: var(--nova-teal);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,163 @@
+.cgm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cgm-container {
+  background: #151515;
+  width: 800px;
+  max-width: 90%;
+  border-radius: 12px;
+  border: 1px solid var(--nova-cyan);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.cgm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.cgm-title {
+  margin: 0;
+  color: var(--nova-cyan);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cgm-badge {
+  font-size: 12px;
+  padding: 3px 10px;
+  background: rgba(0,255,255,0.15);
+  border-radius: 15px;
+  border: 1px solid rgba(0,255,255,0.4);
+}
+
+.cgm-close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.cgm-toolbar {
+  padding: 15px 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background: rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.cgm-toolbar-text {
+  color: #aaa;
+  font-size: 14px;
+  flex: 1;
+}
+
+.cgm-toolbar-strong {
+  color: #fff;
+}
+
+.cgm-select-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cgm-select-label {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.cgm-select {
+  background: #222;
+  color: #00ffa0;
+  border: 1px solid #444;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+.cgm-select:not(:disabled) {
+  cursor: pointer;
+}
+.cgm-select:disabled {
+  cursor: not-allowed;
+}
+
+.cgm-content {
+  padding: 20px;
+}
+
+.cgm-code-container {
+  background: #0a0a0a;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  overflow-y: auto;
+  max-height: 400px;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.cgm-generating-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #00ffa0;
+  font-size: 12px;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+  background: rgba(0,255,160,0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.cgm-pre {
+  color: #00ffa0;
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.cgm-footer {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.cgm-copy-btn {
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,210,255,0.3);
+}
+.cgm-copy-btn:disabled {
+  background: #555;
+  cursor: not-allowed;
+  box-shadow: none;
+}

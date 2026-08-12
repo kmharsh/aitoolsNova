@@ -1,0 +1,258 @@
+.fcp-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.fcp-container {
+  background: #111;
+  width: 95vw;
+  height: 90vh;
+  border-radius: 16px;
+  border: 1px solid var(--nova-cyan);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.fcp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: rgba(0, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.fcp-title {
+  margin: 0;
+  color: var(--nova-cyan);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.fcp-close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.fcp-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.fcp-left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fcp-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.fcp-panel-title {
+  color: #fff;
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.fcp-panel-subtitle {
+  color: #aaa;
+  font-size: 13px;
+  margin: 0;
+}
+
+.fcp-dictate-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+.fcp-dictate-btn.active {
+  background: rgba(255, 68, 68, 0.2);
+  border: 1px solid #ff4444;
+  color: #ff4444;
+}
+.fcp-dictate-btn.inactive {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid var(--nova-cyan);
+  color: var(--nova-cyan);
+}
+
+.fcp-textarea {
+  flex: 1;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  padding: 15px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+}
+
+.fcp-error {
+  color: #ff4444;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.fcp-generate-btn {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+.fcp-generate-btn:not(:disabled) {
+  background: var(--nova-cyan);
+  color: #000;
+  cursor: pointer;
+}
+.fcp-generate-btn:disabled {
+  background: #333;
+  color: #000;
+  cursor: not-allowed;
+}
+
+.fcp-right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #0a0a0a;
+}
+
+.fcp-preview-container {
+  flex: 1;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  overflow-y: auto;
+  color: #ccc;
+}
+
+.fcp-empty-state {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+}
+
+.fcp-loading-state {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--nova-cyan);
+}
+.fcp-loading-icon {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.fcp-doc-content {
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.fcp-doc-title {
+  color: #fff;
+  margin-top: 0;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.fcp-doc-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.fcp-badge-type {
+  background: rgba(255,255,255,0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.fcp-badge-clearance {
+  background: rgba(255,50,50,0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #ff8888;
+}
+
+.fcp-section-title {
+  color: var(--nova-teal);
+}
+
+.fcp-arch-blueprint {
+  background: rgba(0,255,255,0.05);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,255,255,0.1);
+}
+
+.fcp-arch-subtitle {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.fcp-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.fcp-export-md {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.fcp-analyze-btn {
+  flex: 2;
+  padding: 10px;
+  background: var(--nova-cyan);
+  border: none;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}

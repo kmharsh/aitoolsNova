@@ -1,0 +1,56 @@
+.aaf-container {
+  margin-top: 20px;
+  background: rgba(0, 255, 255, 0.02);
+  position: relative;
+  overflow-x: auto;
+}
+
+.aaf-title {
+  color: var(--nova-teal);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.aaf-subtitle {
+  text-align: center;
+  color: #ccc;
+  font-size: 12px;
+}
+
+.aaf-svg-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-width: 800px;
+}
+
+.flow-node-rect {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.flow-node-rect:hover {
+  stroke: #fff !important;
+  stroke-width: 2 !important;
+  fill: rgba(0, 255, 255, 0.1) !important;
+}
+
+.flow-node-icon {
+  animation: pulse 1.5s infinite alternate;
+  pointer-events: none;
+}
+
+.flow-edge-animated {
+  animation: flow 2s linear infinite;
+}
+
+@keyframes flow {
+  from { stroke-dashoffset: 50; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 10px #00ffff; }
+}

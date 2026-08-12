@@ -1,0 +1,41 @@
+.holo-summary {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+}
+
+.holo-summary-title {
+  margin: 0 0 10px 0;
+  color: var(--nova-teal);
+  text-shadow: 0 0 10px var(--nova-teal);
+}
+
+.holo-summary-text {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.risk-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.risk-label {
+  color: #ff3333;
+}
+
+.risk-text {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #ddd;
+}
+
+.timeline-date-label {
+  color: var(--nova-teal);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.timeline-date-value {
+  color: #fff;
+}
